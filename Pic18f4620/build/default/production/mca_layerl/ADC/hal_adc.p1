@@ -1,0 +1,1155 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F2928 `(v ~T0 @X0 0 tf ]
+[v F2929 `(v ~T0 @X0 0 tf ]
+[v F2896 `(v ~T0 @X0 0 tf ]
+"15 mca_layerl/ADC/hal_adc.c
+[; ;mca_layerl/ADC/hal_adc.c: 15: STD_ReturnType ADC_INIT(const adc_conf_t *_adc){
+[c E2855 0 1 .. ]
+[n E2855 . INERRUPT_LOW_PRIORITY INERRUPT_HIGH_PRIORITY  ]
+[c E2875 0 1 2 3 4 5 6 7 .. ]
+[n E2875 . ADC0_TAD ADC2_TAD ADC4_TAD ADC6_TAD ADC8_TAD ADC12_TAD ADC16_TAD ADC20_TAD  ]
+[c E2885 0 1 2 3 4 5 6 .. ]
+[n E2885 . ADC_CONVERSION_CLOCK_FOSC_DIV2 ADC_CONVERSION_CLOCK_FOSC_DIV8 ADC_CONVERSION_CLOCK_FOSC_DIV32 ADC_CONVERSION_CLOCK_FOSC_DIVfrc ADC_CONVERSION_CLOCK_FOSC_DIV4 ADC_CONVERSION_CLOCK_FOSC_DIV16 ADC_CONVERSION_CLOCK_FOSC_DIV64  ]
+[c E2860 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
+[n E2860 . ADC_CHANNEL_AN0 ADC_CHANNEL_AN1 ADC_CHANNEL_AN2 ADC_CHANNEL_AN3 ADC_CHANNEL_AN4 ADC_CHANNEL_AN5 ADC_CHANNEL_AN6 ADC_CHANNEL_AN7 ADC_CHANNEL_AN8 ADC_CHANNEL_AN9 ADC_CHANNEL_AN10 ADC_CHANNEL_AN11 ADC_CHANNEL_AN12  ]
+"111 mca_layerl/ADC/hal_adc.h
+[; ;mca_layerl/ADC/hal_adc.h: 111: typedef struct{
+[s S273 `*F2896 1 `E2855 1 `E2875 1 `E2885 1 `E2860 1 :1 `uc 1 :1 `uc 1 :6 `uc 1 ]
+[n S273 . ADC_INTERRUPT_HANDLER priority acquestion_time conversion_clock adc_channel voltage_refernce result_format adc_reversed ]
+"4536 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
+[s S174 :1 `uc 1 :1 `uc 1 ]
+[n S174 . . GO_NOT_DONE ]
+"4540
+[s S175 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S175 . ADON GO_nDONE CHS ]
+"4545
+[s S176 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S176 . . GO CHS0 CHS1 CHS2 CHS3 ]
+"4553
+[s S177 :1 `uc 1 :1 `uc 1 ]
+[n S177 . . DONE ]
+"4557
+[s S178 :1 `uc 1 :1 `uc 1 ]
+[n S178 . . NOT_DONE ]
+"4561
+[s S179 :1 `uc 1 :1 `uc 1 ]
+[n S179 . . nDONE ]
+"4565
+[s S180 :1 `uc 1 :1 `uc 1 ]
+[n S180 . . GO_DONE ]
+"4569
+[s S181 :1 `uc 1 :1 `uc 1 ]
+[n S181 . . GODONE ]
+"4535
+[u S173 `S174 1 `S175 1 `S176 1 `S177 1 `S178 1 `S179 1 `S180 1 `S181 1 ]
+[n S173 . . . . . . . . . ]
+"4574
+[v _ADCON0bits `VS173 ~T0 @X0 0 e@4034 ]
+"4380
+[s S167 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S167 . ADCS ACQT . ADFM ]
+"4386
+[s S168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S168 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"4379
+[u S166 `S167 1 `S168 1 ]
+[n S166 . . . ]
+"4395
+[v _ADCON2bits `VS166 ~T0 @X0 0 e@4032 ]
+[v F2931 `(v ~T0 @X0 1 tf1`E2860 ]
+"6 mca_layerl/ADC/hal_adc.c
+[; ;mca_layerl/ADC/hal_adc.c: 6: static __attribute__((inline)) void adc_input_port_configure(adc_channel_select_t channel);
+[v _adc_input_port_configure `TF2931 ~T0 @X0 0 s ]
+"2504 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
+[s S86 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S86 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE PSPIE ]
+"2514
+[s S87 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S87 . . TX1IE RC1IE ]
+"2503
+[u S85 `S86 1 `S87 1 ]
+[n S85 . . . ]
+"2520
+[v _PIE1bits `VS85 ~T0 @X0 0 e@3997 ]
+"6381
+[s S258 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S258 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"6391
+[s S259 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S259 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"6401
+[s S260 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S260 . . GIEL GIEH ]
+"6380
+[u S257 `S258 1 `S259 1 `S260 1 ]
+[n S257 . . . . ]
+"6407
+[v _INTCONbits `VS257 ~T0 @X0 0 e@4082 ]
+"2581
+[s S89 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S89 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF PSPIF ]
+"2591
+[s S90 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S90 . . TX1IF RC1IF ]
+"2580
+[u S88 `S89 1 `S90 1 ]
+[n S88 . . . ]
+"2597
+[v _PIR1bits `VS88 ~T0 @X0 0 e@3998 ]
+[v F2934 `(v ~T0 @X0 1 tf1`*CS273 ]
+"7 mca_layerl/ADC/hal_adc.c
+[; ;mca_layerl/ADC/hal_adc.c: 7: static __attribute__((inline)) void adc_select_result_format(const adc_conf_t *_adc);
+[v _adc_select_result_format `TF2934 ~T0 @X0 0 s ]
+[v F2937 `(v ~T0 @X0 1 tf1`*CS273 ]
+"8
+[; ;mca_layerl/ADC/hal_adc.c: 8: static __attribute__((inline)) void adc_configure_voltage_refernce(const adc_conf_t *_adc);
+[v _adc_configure_voltage_refernce `TF2937 ~T0 @X0 0 s ]
+"4663 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"4656
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
+"1381
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"2269
+[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"1603
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"4451
+[s S170 :4 `uc 1 :2 `uc 1 ]
+[n S170 . PCFG VCFG ]
+"4455
+[s S171 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S171 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
+"4463
+[s S172 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S172 . . CHSN3 VCFG01 VCFG11 ]
+"4450
+[u S169 `S170 1 `S171 1 `S172 1 ]
+[n S169 . . . . ]
+"4470
+[v _ADCON1bits `VS169 ~T0 @X0 0 e@4033 ]
+[v F2983 `(v ~T0 @X0 0 tf ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"192
+[; <" PORTB equ 0F81h ;# ">
+"363
+[; <" PORTC equ 0F82h ;# ">
+"538
+[; <" PORTD equ 0F83h ;# ">
+"680
+[; <" PORTE equ 0F84h ;# ">
+"883
+[; <" LATA equ 0F89h ;# ">
+"995
+[; <" LATB equ 0F8Ah ;# ">
+"1107
+[; <" LATC equ 0F8Bh ;# ">
+"1219
+[; <" LATD equ 0F8Ch ;# ">
+"1331
+[; <" LATE equ 0F8Dh ;# ">
+"1383
+[; <" TRISA equ 0F92h ;# ">
+"1388
+[; <" DDRA equ 0F92h ;# ">
+"1605
+[; <" TRISB equ 0F93h ;# ">
+"1610
+[; <" DDRB equ 0F93h ;# ">
+"1827
+[; <" TRISC equ 0F94h ;# ">
+"1832
+[; <" DDRC equ 0F94h ;# ">
+"2049
+[; <" TRISD equ 0F95h ;# ">
+"2054
+[; <" DDRD equ 0F95h ;# ">
+"2271
+[; <" TRISE equ 0F96h ;# ">
+"2276
+[; <" DDRE equ 0F96h ;# ">
+"2435
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2500
+[; <" PIE1 equ 0F9Dh ;# ">
+"2577
+[; <" PIR1 equ 0F9Eh ;# ">
+"2654
+[; <" IPR1 equ 0F9Fh ;# ">
+"2731
+[; <" PIE2 equ 0FA0h ;# ">
+"2797
+[; <" PIR2 equ 0FA1h ;# ">
+"2863
+[; <" IPR2 equ 0FA2h ;# ">
+"2929
+[; <" EECON1 equ 0FA6h ;# ">
+"2995
+[; <" EECON2 equ 0FA7h ;# ">
+"3002
+[; <" EEDATA equ 0FA8h ;# ">
+"3009
+[; <" EEADR equ 0FA9h ;# ">
+"3016
+[; <" EEADRH equ 0FAAh ;# ">
+"3023
+[; <" RCSTA equ 0FABh ;# ">
+"3028
+[; <" RCSTA1 equ 0FABh ;# ">
+"3233
+[; <" TXSTA equ 0FACh ;# ">
+"3238
+[; <" TXSTA1 equ 0FACh ;# ">
+"3489
+[; <" TXREG equ 0FADh ;# ">
+"3494
+[; <" TXREG1 equ 0FADh ;# ">
+"3501
+[; <" RCREG equ 0FAEh ;# ">
+"3506
+[; <" RCREG1 equ 0FAEh ;# ">
+"3513
+[; <" SPBRG equ 0FAFh ;# ">
+"3518
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3525
+[; <" SPBRGH equ 0FB0h ;# ">
+"3532
+[; <" T3CON equ 0FB1h ;# ">
+"3644
+[; <" TMR3 equ 0FB2h ;# ">
+"3651
+[; <" TMR3L equ 0FB2h ;# ">
+"3658
+[; <" TMR3H equ 0FB3h ;# ">
+"3665
+[; <" CMCON equ 0FB4h ;# ">
+"3755
+[; <" CVRCON equ 0FB5h ;# ">
+"3834
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3916
+[; <" PWM1CON equ 0FB7h ;# ">
+"3986
+[; <" BAUDCON equ 0FB8h ;# ">
+"3991
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4158
+[; <" CCP2CON equ 0FBAh ;# ">
+"4237
+[; <" CCPR2 equ 0FBBh ;# ">
+"4244
+[; <" CCPR2L equ 0FBBh ;# ">
+"4251
+[; <" CCPR2H equ 0FBCh ;# ">
+"4258
+[; <" CCP1CON equ 0FBDh ;# ">
+"4355
+[; <" CCPR1 equ 0FBEh ;# ">
+"4362
+[; <" CCPR1L equ 0FBEh ;# ">
+"4369
+[; <" CCPR1H equ 0FBFh ;# ">
+"4376
+[; <" ADCON2 equ 0FC0h ;# ">
+"4447
+[; <" ADCON1 equ 0FC1h ;# ">
+"4532
+[; <" ADCON0 equ 0FC2h ;# ">
+"4651
+[; <" ADRES equ 0FC3h ;# ">
+"4658
+[; <" ADRESL equ 0FC3h ;# ">
+"4665
+[; <" ADRESH equ 0FC4h ;# ">
+"4672
+[; <" SSPCON2 equ 0FC5h ;# ">
+"4734
+[; <" SSPCON1 equ 0FC6h ;# ">
+"4804
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5025
+[; <" SSPADD equ 0FC8h ;# ">
+"5032
+[; <" SSPBUF equ 0FC9h ;# ">
+"5039
+[; <" T2CON equ 0FCAh ;# ">
+"5110
+[; <" PR2 equ 0FCBh ;# ">
+"5115
+[; <" MEMCON equ 0FCBh ;# ">
+"5220
+[; <" TMR2 equ 0FCCh ;# ">
+"5227
+[; <" T1CON equ 0FCDh ;# ">
+"5330
+[; <" TMR1 equ 0FCEh ;# ">
+"5337
+[; <" TMR1L equ 0FCEh ;# ">
+"5344
+[; <" TMR1H equ 0FCFh ;# ">
+"5351
+[; <" RCON equ 0FD0h ;# ">
+"5484
+[; <" WDTCON equ 0FD1h ;# ">
+"5512
+[; <" HLVDCON equ 0FD2h ;# ">
+"5517
+[; <" LVDCON equ 0FD2h ;# ">
+"5782
+[; <" OSCCON equ 0FD3h ;# ">
+"5859
+[; <" T0CON equ 0FD5h ;# ">
+"5936
+[; <" TMR0 equ 0FD6h ;# ">
+"5943
+[; <" TMR0L equ 0FD6h ;# ">
+"5950
+[; <" TMR0H equ 0FD7h ;# ">
+"5957
+[; <" STATUS equ 0FD8h ;# ">
+"6028
+[; <" FSR2 equ 0FD9h ;# ">
+"6035
+[; <" FSR2L equ 0FD9h ;# ">
+"6042
+[; <" FSR2H equ 0FDAh ;# ">
+"6049
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6056
+[; <" PREINC2 equ 0FDCh ;# ">
+"6063
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6070
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6077
+[; <" INDF2 equ 0FDFh ;# ">
+"6084
+[; <" BSR equ 0FE0h ;# ">
+"6091
+[; <" FSR1 equ 0FE1h ;# ">
+"6098
+[; <" FSR1L equ 0FE1h ;# ">
+"6105
+[; <" FSR1H equ 0FE2h ;# ">
+"6112
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6119
+[; <" PREINC1 equ 0FE4h ;# ">
+"6126
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6133
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6140
+[; <" INDF1 equ 0FE7h ;# ">
+"6147
+[; <" WREG equ 0FE8h ;# ">
+"6159
+[; <" FSR0 equ 0FE9h ;# ">
+"6166
+[; <" FSR0L equ 0FE9h ;# ">
+"6173
+[; <" FSR0H equ 0FEAh ;# ">
+"6180
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6187
+[; <" PREINC0 equ 0FECh ;# ">
+"6194
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6201
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6208
+[; <" INDF0 equ 0FEFh ;# ">
+"6215
+[; <" INTCON3 equ 0FF0h ;# ">
+"6307
+[; <" INTCON2 equ 0FF1h ;# ">
+"6377
+[; <" INTCON equ 0FF2h ;# ">
+"6494
+[; <" PROD equ 0FF3h ;# ">
+"6501
+[; <" PRODL equ 0FF3h ;# ">
+"6508
+[; <" PRODH equ 0FF4h ;# ">
+"6515
+[; <" TABLAT equ 0FF5h ;# ">
+"6524
+[; <" TBLPTR equ 0FF6h ;# ">
+"6531
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6538
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6545
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6554
+[; <" PCLAT equ 0FF9h ;# ">
+"6561
+[; <" PC equ 0FF9h ;# ">
+"6568
+[; <" PCL equ 0FF9h ;# ">
+"6575
+[; <" PCLATH equ 0FFAh ;# ">
+"6582
+[; <" PCLATU equ 0FFBh ;# ">
+"6589
+[; <" STKPTR equ 0FFCh ;# ">
+"6695
+[; <" TOS equ 0FFDh ;# ">
+"6702
+[; <" TOSL equ 0FFDh ;# ">
+"6709
+[; <" TOSH equ 0FFEh ;# ">
+"6716
+[; <" TOSU equ 0FFFh ;# ">
+"26 mca_layerl/ADC/../interrupt/../GPIO/../device_config.h
+[p x OSC  =  HS          ]
+"27
+[p x FCMEN  =  OFF       ]
+"28
+[p x IESO  =  OFF        ]
+"31
+[p x PWRT  =  OFF        ]
+"32
+[p x BOREN  =  OFF       ]
+"33
+[p x BORV  =  1          ]
+"36
+[p x WDT  =  OFF         ]
+"37
+[p x WDTPS  =  32768     ]
+"40
+[p x CCP2MX  =  PORTC    ]
+"41
+[p x PBADEN  =  OFF      ]
+"42
+[p x LPT1OSC  =  OFF     ]
+"43
+[p x MCLRE  =  ON        ]
+"46
+[p x STVREN  =  ON       ]
+"47
+[p x LVP  =  OFF         ]
+"48
+[p x XINST  =  OFF       ]
+"51
+[p x CP0  =  OFF         ]
+"52
+[p x CP1  =  OFF         ]
+"53
+[p x CP2  =  OFF         ]
+"54
+[p x CP3  =  OFF         ]
+"57
+[p x CPB  =  OFF         ]
+"58
+[p x CPD  =  OFF         ]
+"61
+[p x WRT0  =  OFF        ]
+"62
+[p x WRT1  =  OFF        ]
+"63
+[p x WRT2  =  OFF        ]
+"64
+[p x WRT3  =  OFF        ]
+"67
+[p x WRTC  =  OFF        ]
+"68
+[p x WRTB  =  OFF        ]
+"69
+[p x WRTD  =  OFF        ]
+"72
+[p x EBTR0  =  OFF       ]
+"73
+[p x EBTR1  =  OFF       ]
+"74
+[p x EBTR2  =  OFF       ]
+"75
+[p x EBTR3  =  OFF       ]
+"78
+[p x EBTRB  =  OFF       ]
+"4 mca_layerl/ADC/hal_adc.c
+[; ;mca_layerl/ADC/hal_adc.c: 4: static void (*ADC_INTERRUPT_HANDLER)(void)=((void*)0);
+[v _ADC_INTERRUPT_HANDLER `*F2928 ~T0 @X0 1 s ]
+[i _ADC_INTERRUPT_HANDLER
+-> -> -> 0 `i `*v `*F2929
+]
+"15
+[; ;mca_layerl/ADC/hal_adc.c: 15: STD_ReturnType ADC_INIT(const adc_conf_t *_adc){
+[v _ADC_INIT `(uc ~T0 @X0 1 ef1`*CS273 ]
+{
+[e :U _ADC_INIT ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"16
+[; ;mca_layerl/ADC/hal_adc.c: 16:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"17
+[; ;mca_layerl/ADC/hal_adc.c: 17:     if(((void*)0) == _adc){
+[e $ ! == -> -> -> 0 `i `*v `*CS273 __adc 275  ]
+{
+"18
+[; ;mca_layerl/ADC/hal_adc.c: 18:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"19
+[; ;mca_layerl/ADC/hal_adc.c: 19:     }
+}
+[e $U 276  ]
+"20
+[; ;mca_layerl/ADC/hal_adc.c: 20:     else{
+[e :U 275 ]
+{
+"22
+[; ;mca_layerl/ADC/hal_adc.c: 22:         (ADCON0bits.ADON=0);
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+"24
+[; ;mca_layerl/ADC/hal_adc.c: 24:         ADCON2bits.ACQT=_adc->acquestion_time;
+[e = . . _ADCON2bits 0 1 -> . *U __adc 2 `uc ]
+"26
+[; ;mca_layerl/ADC/hal_adc.c: 26:         ADCON2bits.ADCS=_adc->conversion_clock;
+[e = . . _ADCON2bits 0 0 -> . *U __adc 3 `uc ]
+"28
+[; ;mca_layerl/ADC/hal_adc.c: 28:         ADCON0bits.CHS=_adc->adc_channel;
+[e = . . _ADCON0bits 1 2 -> . *U __adc 4 `uc ]
+"29
+[; ;mca_layerl/ADC/hal_adc.c: 29:         adc_input_port_configure(_adc->adc_channel);
+[e ( _adc_input_port_configure (1 . *U __adc 4 ]
+"32
+[; ;mca_layerl/ADC/hal_adc.c: 32:         ADC_INTERRUPT_HANDLER = _adc->ADC_INTERRUPT_HANDLER;
+[e = _ADC_INTERRUPT_HANDLER . *U __adc 0 ]
+"33
+[; ;mca_layerl/ADC/hal_adc.c: 33:         (PIE1bits.ADIE=1);
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"34
+[; ;mca_layerl/ADC/hal_adc.c: 34:         (INTCONbits.GIE=1);
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"35
+[; ;mca_layerl/ADC/hal_adc.c: 35:         (INTCONbits.PEIE=1);
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"36
+[; ;mca_layerl/ADC/hal_adc.c: 36:         (PIR1bits.ADIF=0);
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"48
+[; ;mca_layerl/ADC/hal_adc.c: 48:         adc_select_result_format(_adc);
+[e ( _adc_select_result_format (1 __adc ]
+"50
+[; ;mca_layerl/ADC/hal_adc.c: 50:         adc_configure_voltage_refernce(_adc);
+[e ( _adc_configure_voltage_refernce (1 __adc ]
+"52
+[; ;mca_layerl/ADC/hal_adc.c: 52:         (ADCON0bits.ADON=1);
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"53
+[; ;mca_layerl/ADC/hal_adc.c: 53:         ret = (STD_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"54
+[; ;mca_layerl/ADC/hal_adc.c: 54:     }
+}
+[e :U 276 ]
+"55
+[; ;mca_layerl/ADC/hal_adc.c: 55:     return ret;
+[e ) _ret ]
+[e $UE 274  ]
+"56
+[; ;mca_layerl/ADC/hal_adc.c: 56: }
+[e :UE 274 ]
+}
+"62
+[; ;mca_layerl/ADC/hal_adc.c: 62: STD_ReturnType ADC_DEINIT(const adc_conf_t *_adc){
+[v _ADC_DEINIT `(uc ~T0 @X0 1 ef1`*CS273 ]
+{
+[e :U _ADC_DEINIT ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"63
+[; ;mca_layerl/ADC/hal_adc.c: 63:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"64
+[; ;mca_layerl/ADC/hal_adc.c: 64:     if(((void*)0) == _adc){
+[e $ ! == -> -> -> 0 `i `*v `*CS273 __adc 278  ]
+{
+"65
+[; ;mca_layerl/ADC/hal_adc.c: 65:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"66
+[; ;mca_layerl/ADC/hal_adc.c: 66:     }
+}
+[e $U 279  ]
+"67
+[; ;mca_layerl/ADC/hal_adc.c: 67:     else{
+[e :U 278 ]
+{
+"69
+[; ;mca_layerl/ADC/hal_adc.c: 69:         (ADCON0bits.ADON=0);
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+"72
+[; ;mca_layerl/ADC/hal_adc.c: 72:         (PIE1bits.ADIE=0);
+[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
+"74
+[; ;mca_layerl/ADC/hal_adc.c: 74:         ret = (STD_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"75
+[; ;mca_layerl/ADC/hal_adc.c: 75:     }
+}
+[e :U 279 ]
+"76
+[; ;mca_layerl/ADC/hal_adc.c: 76:     return ret;
+[e ) _ret ]
+[e $UE 277  ]
+"77
+[; ;mca_layerl/ADC/hal_adc.c: 77: }
+[e :UE 277 ]
+}
+"84
+[; ;mca_layerl/ADC/hal_adc.c: 84: STD_ReturnType ADC_SELECT_CHANNEL(const adc_conf_t *_adc,adc_channel_select_t channel){
+[v _ADC_SELECT_CHANNEL `(uc ~T0 @X0 1 ef2`*CS273`E2860 ]
+{
+[e :U _ADC_SELECT_CHANNEL ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[v _channel `E2860 ~T0 @X0 1 r2 ]
+[f ]
+"85
+[; ;mca_layerl/ADC/hal_adc.c: 85:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"86
+[; ;mca_layerl/ADC/hal_adc.c: 86:     if(((void*)0) == _adc){
+[e $ ! == -> -> -> 0 `i `*v `*CS273 __adc 281  ]
+{
+"87
+[; ;mca_layerl/ADC/hal_adc.c: 87:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"88
+[; ;mca_layerl/ADC/hal_adc.c: 88:     }
+}
+[e $U 282  ]
+"89
+[; ;mca_layerl/ADC/hal_adc.c: 89:     else{
+[e :U 281 ]
+{
+"90
+[; ;mca_layerl/ADC/hal_adc.c: 90:         ADCON0bits.CHS=channel;
+[e = . . _ADCON0bits 1 2 -> _channel `uc ]
+"91
+[; ;mca_layerl/ADC/hal_adc.c: 91:         adc_input_port_configure(_adc->adc_channel);
+[e ( _adc_input_port_configure (1 . *U __adc 4 ]
+"92
+[; ;mca_layerl/ADC/hal_adc.c: 92:     }
+}
+[e :U 282 ]
+"93
+[; ;mca_layerl/ADC/hal_adc.c: 93:     return ret;
+[e ) _ret ]
+[e $UE 280  ]
+"94
+[; ;mca_layerl/ADC/hal_adc.c: 94: }
+[e :UE 280 ]
+}
+"100
+[; ;mca_layerl/ADC/hal_adc.c: 100: STD_ReturnType ADC_STARTING_CONVERSION(const adc_conf_t *_adc){
+[v _ADC_STARTING_CONVERSION `(uc ~T0 @X0 1 ef1`*CS273 ]
+{
+[e :U _ADC_STARTING_CONVERSION ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"101
+[; ;mca_layerl/ADC/hal_adc.c: 101:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"102
+[; ;mca_layerl/ADC/hal_adc.c: 102:     if(((void*)0) == _adc){
+[e $ ! == -> -> -> 0 `i `*v `*CS273 __adc 284  ]
+{
+"103
+[; ;mca_layerl/ADC/hal_adc.c: 103:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"104
+[; ;mca_layerl/ADC/hal_adc.c: 104:     }
+}
+[e $U 285  ]
+"105
+[; ;mca_layerl/ADC/hal_adc.c: 105:     else{
+[e :U 284 ]
+{
+"106
+[; ;mca_layerl/ADC/hal_adc.c: 106:         ret = (ADCON0bits.GO_nDONE=1);
+[e = _ret = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"107
+[; ;mca_layerl/ADC/hal_adc.c: 107:     }
+}
+[e :U 285 ]
+"108
+[; ;mca_layerl/ADC/hal_adc.c: 108:     return ret;
+[e ) _ret ]
+[e $UE 283  ]
+"109
+[; ;mca_layerl/ADC/hal_adc.c: 109: }
+[e :UE 283 ]
+}
+"116
+[; ;mca_layerl/ADC/hal_adc.c: 116: STD_ReturnType ADC_IsConversionDone(const adc_conf_t *_adc,uint8 *conversion_status){
+[v _ADC_IsConversionDone `(uc ~T0 @X0 1 ef2`*CS273`*uc ]
+{
+[e :U _ADC_IsConversionDone ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[v _conversion_status `*uc ~T0 @X0 1 r2 ]
+[f ]
+"117
+[; ;mca_layerl/ADC/hal_adc.c: 117:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"118
+[; ;mca_layerl/ADC/hal_adc.c: 118:     if( (((void*)0) == _adc) || (((void*)0)==conversion_status)){
+[e $ ! || == -> -> -> 0 `i `*v `*CS273 __adc == -> -> -> 0 `i `*v `*uc _conversion_status 287  ]
+{
+"119
+[; ;mca_layerl/ADC/hal_adc.c: 119:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"120
+[; ;mca_layerl/ADC/hal_adc.c: 120:     }
+}
+[e $U 288  ]
+"121
+[; ;mca_layerl/ADC/hal_adc.c: 121:     else{
+[e :U 287 ]
+{
+"122
+[; ;mca_layerl/ADC/hal_adc.c: 122:         *conversion_status = ADCON0bits.GO_nDONE;
+[e = *U _conversion_status . . _ADCON0bits 1 1 ]
+"123
+[; ;mca_layerl/ADC/hal_adc.c: 123:         *conversion_status = (uint8)(!(ADCON0bits.GO_nDONE));
+[e = *U _conversion_status -> -> ! != -> . . _ADCON0bits 1 1 `i -> 0 `i `i `uc ]
+"124
+[; ;mca_layerl/ADC/hal_adc.c: 124:         ret = (STD_ReturnType)0x01;
+[e = _ret -> -> 1 `i `uc ]
+"125
+[; ;mca_layerl/ADC/hal_adc.c: 125:     }
+}
+[e :U 288 ]
+"126
+[; ;mca_layerl/ADC/hal_adc.c: 126:     return ret;
+[e ) _ret ]
+[e $UE 286  ]
+"127
+[; ;mca_layerl/ADC/hal_adc.c: 127: }
+[e :UE 286 ]
+}
+"134
+[; ;mca_layerl/ADC/hal_adc.c: 134: STD_ReturnType ADC_GetConversionResult(const adc_conf_t *_adc,adc_result *conversion_result){
+[v _ADC_GetConversionResult `(uc ~T0 @X0 1 ef2`*CS273`*us ]
+{
+[e :U _ADC_GetConversionResult ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[v _conversion_result `*us ~T0 @X0 1 r2 ]
+[f ]
+"135
+[; ;mca_layerl/ADC/hal_adc.c: 135:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"136
+[; ;mca_layerl/ADC/hal_adc.c: 136:     if( (((void*)0) == _adc) || (((void*)0)==conversion_result)){
+[e $ ! || == -> -> -> 0 `i `*v `*CS273 __adc == -> -> -> 0 `i `*v `*us _conversion_result 290  ]
+{
+"137
+[; ;mca_layerl/ADC/hal_adc.c: 137:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"138
+[; ;mca_layerl/ADC/hal_adc.c: 138:     }
+}
+[e $U 291  ]
+"139
+[; ;mca_layerl/ADC/hal_adc.c: 139:     else{
+[e :U 290 ]
+{
+"140
+[; ;mca_layerl/ADC/hal_adc.c: 140:         if(0x01 == _adc->result_format){
+[e $ ! == -> 1 `i -> . *U __adc 6 `i 292  ]
+{
+"141
+[; ;mca_layerl/ADC/hal_adc.c: 141:             *conversion_result = (adc_result)((ADRESH<< 8 )+ ADRESL );
+[e = *U _conversion_result -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
+"142
+[; ;mca_layerl/ADC/hal_adc.c: 142:         }
+}
+[e $U 293  ]
+"143
+[; ;mca_layerl/ADC/hal_adc.c: 143:         else if(0x00 == _adc->result_format){
+[e :U 292 ]
+[e $ ! == -> 0 `i -> . *U __adc 6 `i 294  ]
+{
+"144
+[; ;mca_layerl/ADC/hal_adc.c: 144:                     *conversion_result = (adc_result)(((ADRESH<< 8 )+ ADRESL ) >> 6);
+[e = *U _conversion_result -> >> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i -> 6 `i `us ]
+"145
+[; ;mca_layerl/ADC/hal_adc.c: 145:         }
+}
+[e $U 295  ]
+"146
+[; ;mca_layerl/ADC/hal_adc.c: 146:         else{
+[e :U 294 ]
+{
+"147
+[; ;mca_layerl/ADC/hal_adc.c: 147:             *conversion_result = (adc_result)((ADRESH<< 8 )+ ADRESL );
+[e = *U _conversion_result -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
+"148
+[; ;mca_layerl/ADC/hal_adc.c: 148:         }
+}
+[e :U 295 ]
+[e :U 293 ]
+"149
+[; ;mca_layerl/ADC/hal_adc.c: 149:     }
+}
+[e :U 291 ]
+"150
+[; ;mca_layerl/ADC/hal_adc.c: 150:     return ret;
+[e ) _ret ]
+[e $UE 289  ]
+"151
+[; ;mca_layerl/ADC/hal_adc.c: 151: }
+[e :UE 289 ]
+}
+"159
+[; ;mca_layerl/ADC/hal_adc.c: 159: STD_ReturnType ADC_GetConversion_Blooking(const adc_conf_t *_adc,adc_channel_select_t channel,adc_result *conversion_result){
+[v _ADC_GetConversion_Blooking `(uc ~T0 @X0 1 ef3`*CS273`E2860`*us ]
+{
+[e :U _ADC_GetConversion_Blooking ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[v _channel `E2860 ~T0 @X0 1 r2 ]
+[v _conversion_result `*us ~T0 @X0 1 r3 ]
+[f ]
+"160
+[; ;mca_layerl/ADC/hal_adc.c: 160:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"161
+[; ;mca_layerl/ADC/hal_adc.c: 161:     uint8 conversion_status=0;
+[v _conversion_status `uc ~T0 @X0 1 a ]
+[e = _conversion_status -> -> 0 `i `uc ]
+"162
+[; ;mca_layerl/ADC/hal_adc.c: 162:     if( (((void*)0) == _adc) || (((void*)0)==conversion_result)){
+[e $ ! || == -> -> -> 0 `i `*v `*CS273 __adc == -> -> -> 0 `i `*v `*us _conversion_result 297  ]
+{
+"163
+[; ;mca_layerl/ADC/hal_adc.c: 163:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"164
+[; ;mca_layerl/ADC/hal_adc.c: 164:     }
+}
+[e $U 298  ]
+"165
+[; ;mca_layerl/ADC/hal_adc.c: 165:     else{
+[e :U 297 ]
+{
+"167
+[; ;mca_layerl/ADC/hal_adc.c: 167:         ret = ADC_SELECT_CHANNEL(_adc,channel);
+[e = _ret ( _ADC_SELECT_CHANNEL (2 , __adc _channel ]
+"169
+[; ;mca_layerl/ADC/hal_adc.c: 169:         ret = ADC_STARTING_CONVERSION(_adc);
+[e = _ret ( _ADC_STARTING_CONVERSION (1 __adc ]
+"171
+[; ;mca_layerl/ADC/hal_adc.c: 171:         while(ADCON0bits.GO_nDONE);
+[e $U 299  ]
+[e :U 300 ]
+[e :U 299 ]
+[e $ != -> . . _ADCON0bits 1 1 `i -> 0 `i 300  ]
+[e :U 301 ]
+"172
+[; ;mca_layerl/ADC/hal_adc.c: 172:         ret = ADC_GetConversionResult(_adc,conversion_result);
+[e = _ret ( _ADC_GetConversionResult (2 , __adc _conversion_result ]
+"173
+[; ;mca_layerl/ADC/hal_adc.c: 173:     }
+}
+[e :U 298 ]
+"174
+[; ;mca_layerl/ADC/hal_adc.c: 174:     return ret;
+[e ) _ret ]
+[e $UE 296  ]
+"175
+[; ;mca_layerl/ADC/hal_adc.c: 175: }
+[e :UE 296 ]
+}
+"184
+[; ;mca_layerl/ADC/hal_adc.c: 184: STD_ReturnType ADC_GetConversion_Interrupt(const adc_conf_t *_adc,adc_channel_select_t channel){
+[v _ADC_GetConversion_Interrupt `(uc ~T0 @X0 1 ef2`*CS273`E2860 ]
+{
+[e :U _ADC_GetConversion_Interrupt ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[v _channel `E2860 ~T0 @X0 1 r2 ]
+[f ]
+"185
+[; ;mca_layerl/ADC/hal_adc.c: 185:     STD_ReturnType ret =(STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"186
+[; ;mca_layerl/ADC/hal_adc.c: 186:     if( (((void*)0) == _adc) ){
+[e $ ! == -> -> -> 0 `i `*v `*CS273 __adc 303  ]
+{
+"187
+[; ;mca_layerl/ADC/hal_adc.c: 187:         ret =(STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"188
+[; ;mca_layerl/ADC/hal_adc.c: 188:     }
+}
+[e $U 304  ]
+"189
+[; ;mca_layerl/ADC/hal_adc.c: 189:     else{
+[e :U 303 ]
+{
+"191
+[; ;mca_layerl/ADC/hal_adc.c: 191:         ret = ADC_SELECT_CHANNEL(_adc,channel);
+[e = _ret ( _ADC_SELECT_CHANNEL (2 , __adc _channel ]
+"193
+[; ;mca_layerl/ADC/hal_adc.c: 193:         ret = ADC_STARTING_CONVERSION(_adc);
+[e = _ret ( _ADC_STARTING_CONVERSION (1 __adc ]
+"195
+[; ;mca_layerl/ADC/hal_adc.c: 195:     }
+}
+[e :U 304 ]
+"196
+[; ;mca_layerl/ADC/hal_adc.c: 196:     return ret;
+[e ) _ret ]
+[e $UE 302  ]
+"197
+[; ;mca_layerl/ADC/hal_adc.c: 197: }
+[e :UE 302 ]
+}
+[v F2974 `(v ~T0 @X0 1 tf1`E2860 ]
+"201
+[; ;mca_layerl/ADC/hal_adc.c: 201: static __attribute__((inline)) void adc_input_port_configure(adc_channel_select_t channel){
+[v _adc_input_port_configure `TF2974 ~T0 @X0 1 s ]
+{
+[e :U _adc_input_port_configure ]
+[v _channel `E2860 ~T0 @X0 1 r1 ]
+[f ]
+"202
+[; ;mca_layerl/ADC/hal_adc.c: 202:     switch(channel){
+[e $U 307  ]
+{
+"203
+[; ;mca_layerl/ADC/hal_adc.c: 203:         case ADC_CHANNEL_AN0 : (TRISA |= ((uint8)1 << 0x0));break;
+[e :U 308 ]
+[e =| _TRISA -> << -> -> -> 1 `i `uc `i -> 0 `i `Vuc ]
+[e $U 306  ]
+"204
+[; ;mca_layerl/ADC/hal_adc.c: 204:         case ADC_CHANNEL_AN1 : (TRISA |= ((uint8)1 << 0x1));break;
+[e :U 309 ]
+[e =| _TRISA -> << -> -> -> 1 `i `uc `i -> 1 `i `Vuc ]
+[e $U 306  ]
+"205
+[; ;mca_layerl/ADC/hal_adc.c: 205:         case ADC_CHANNEL_AN2 : (TRISA |= ((uint8)1 << 0x2));break;
+[e :U 310 ]
+[e =| _TRISA -> << -> -> -> 1 `i `uc `i -> 2 `i `Vuc ]
+[e $U 306  ]
+"206
+[; ;mca_layerl/ADC/hal_adc.c: 206:         case ADC_CHANNEL_AN3 : (TRISA |= ((uint8)1 << 0x3));break;
+[e :U 311 ]
+[e =| _TRISA -> << -> -> -> 1 `i `uc `i -> 3 `i `Vuc ]
+[e $U 306  ]
+"207
+[; ;mca_layerl/ADC/hal_adc.c: 207:         case ADC_CHANNEL_AN4 : (TRISA |= ((uint8)1 << 0x4));break;
+[e :U 312 ]
+[e =| _TRISA -> << -> -> -> 1 `i `uc `i -> 4 `i `Vuc ]
+[e $U 306  ]
+"208
+[; ;mca_layerl/ADC/hal_adc.c: 208:         case ADC_CHANNEL_AN5 : (TRISE |= ((uint8)1 << 0x0));break;
+[e :U 313 ]
+[e =| _TRISE -> << -> -> -> 1 `i `uc `i -> 0 `i `Vuc ]
+[e $U 306  ]
+"209
+[; ;mca_layerl/ADC/hal_adc.c: 209:         case ADC_CHANNEL_AN6 : (TRISE |= ((uint8)1 << 0x1));break;
+[e :U 314 ]
+[e =| _TRISE -> << -> -> -> 1 `i `uc `i -> 1 `i `Vuc ]
+[e $U 306  ]
+"210
+[; ;mca_layerl/ADC/hal_adc.c: 210:         case ADC_CHANNEL_AN7 : (TRISE |= ((uint8)1 << 0x2));break;
+[e :U 315 ]
+[e =| _TRISE -> << -> -> -> 1 `i `uc `i -> 2 `i `Vuc ]
+[e $U 306  ]
+"211
+[; ;mca_layerl/ADC/hal_adc.c: 211:         case ADC_CHANNEL_AN8 : (TRISB |= ((uint8)1 << 0x2));break;
+[e :U 316 ]
+[e =| _TRISB -> << -> -> -> 1 `i `uc `i -> 2 `i `Vuc ]
+[e $U 306  ]
+"212
+[; ;mca_layerl/ADC/hal_adc.c: 212:         case ADC_CHANNEL_AN9 : (TRISB |= ((uint8)1 << 0x3));break;
+[e :U 317 ]
+[e =| _TRISB -> << -> -> -> 1 `i `uc `i -> 3 `i `Vuc ]
+[e $U 306  ]
+"213
+[; ;mca_layerl/ADC/hal_adc.c: 213:         case ADC_CHANNEL_AN10 : (TRISB |= ((uint8)1 << 0x1));break;
+[e :U 318 ]
+[e =| _TRISB -> << -> -> -> 1 `i `uc `i -> 1 `i `Vuc ]
+[e $U 306  ]
+"214
+[; ;mca_layerl/ADC/hal_adc.c: 214:         case ADC_CHANNEL_AN11 : (TRISB |= ((uint8)1 << 0x4));break;
+[e :U 319 ]
+[e =| _TRISB -> << -> -> -> 1 `i `uc `i -> 4 `i `Vuc ]
+[e $U 306  ]
+"215
+[; ;mca_layerl/ADC/hal_adc.c: 215:         case ADC_CHANNEL_AN12 : (TRISB |= ((uint8)1 << 0x0));break;
+[e :U 320 ]
+[e =| _TRISB -> << -> -> -> 1 `i `uc `i -> 0 `i `Vuc ]
+[e $U 306  ]
+"216
+[; ;mca_layerl/ADC/hal_adc.c: 216:         default : break;
+[e :U 321 ]
+[e $U 306  ]
+"217
+[; ;mca_layerl/ADC/hal_adc.c: 217:     }
+}
+[e $U 306  ]
+[e :U 307 ]
+[e [\ -> _channel `ui , $ -> . `E2860 0 `ui 308
+ , $ -> . `E2860 1 `ui 309
+ , $ -> . `E2860 2 `ui 310
+ , $ -> . `E2860 3 `ui 311
+ , $ -> . `E2860 4 `ui 312
+ , $ -> . `E2860 5 `ui 313
+ , $ -> . `E2860 6 `ui 314
+ , $ -> . `E2860 7 `ui 315
+ , $ -> . `E2860 8 `ui 316
+ , $ -> . `E2860 9 `ui 317
+ , $ -> . `E2860 10 `ui 318
+ , $ -> . `E2860 11 `ui 319
+ , $ -> . `E2860 12 `ui 320
+ 321 ]
+[e :U 306 ]
+"218
+[; ;mca_layerl/ADC/hal_adc.c: 218: }
+[e :UE 305 ]
+}
+[v F2977 `(v ~T0 @X0 1 tf1`*CS273 ]
+"220
+[; ;mca_layerl/ADC/hal_adc.c: 220: static __attribute__((inline)) void adc_select_result_format(const adc_conf_t *_adc){
+[v _adc_select_result_format `TF2977 ~T0 @X0 1 s ]
+{
+[e :U _adc_select_result_format ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"221
+[; ;mca_layerl/ADC/hal_adc.c: 221:     if(0x01 == _adc->result_format){
+[e $ ! == -> 1 `i -> . *U __adc 6 `i 323  ]
+{
+"222
+[; ;mca_layerl/ADC/hal_adc.c: 222:         (ADCON2bits.ADFM=1);
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"223
+[; ;mca_layerl/ADC/hal_adc.c: 223:     }
+}
+[e $U 324  ]
+"224
+[; ;mca_layerl/ADC/hal_adc.c: 224:     else if(0x00== _adc->result_format){
+[e :U 323 ]
+[e $ ! == -> 0 `i -> . *U __adc 6 `i 325  ]
+{
+"225
+[; ;mca_layerl/ADC/hal_adc.c: 225:         (ADCON2bits.ADFM=0);
+[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
+"226
+[; ;mca_layerl/ADC/hal_adc.c: 226:     }
+}
+[e $U 326  ]
+"227
+[; ;mca_layerl/ADC/hal_adc.c: 227:     else{
+[e :U 325 ]
+{
+"228
+[; ;mca_layerl/ADC/hal_adc.c: 228:         (ADCON2bits.ADFM=1);
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"229
+[; ;mca_layerl/ADC/hal_adc.c: 229:     }
+}
+[e :U 326 ]
+[e :U 324 ]
+"230
+[; ;mca_layerl/ADC/hal_adc.c: 230: }
+[e :UE 322 ]
+}
+[v F2980 `(v ~T0 @X0 1 tf1`*CS273 ]
+"232
+[; ;mca_layerl/ADC/hal_adc.c: 232: static __attribute__((inline)) void adc_configure_voltage_refernce(const adc_conf_t *_adc){
+[v _adc_configure_voltage_refernce `TF2980 ~T0 @X0 1 s ]
+{
+[e :U _adc_configure_voltage_refernce ]
+[v __adc `*CS273 ~T0 @X0 1 r1 ]
+[f ]
+"233
+[; ;mca_layerl/ADC/hal_adc.c: 233:     if(0x01 == _adc->voltage_refernce){
+[e $ ! == -> 1 `i -> . *U __adc 5 `i 328  ]
+{
+"234
+[; ;mca_layerl/ADC/hal_adc.c: 234:         do{ADCON1bits.VCFG1=1; ADCON1bits.VCFG0=1; }while(0);
+[e :U 331 ]
+{
+[e = . . _ADCON1bits 1 5 -> -> 1 `i `uc ]
+[e = . . _ADCON1bits 1 4 -> -> 1 `i `uc ]
+}
+[e :U 330 ]
+"235
+[; ;mca_layerl/ADC/hal_adc.c: 235:     }
+}
+[e $U 332  ]
+"236
+[; ;mca_layerl/ADC/hal_adc.c: 236:     else if(0x00== _adc->voltage_refernce){
+[e :U 328 ]
+[e $ ! == -> 0 `i -> . *U __adc 5 `i 333  ]
+{
+"237
+[; ;mca_layerl/ADC/hal_adc.c: 237:         do{ADCON1bits.VCFG1=0; ADCON1bits.VCFG0=0; }while(0);
+[e :U 336 ]
+{
+[e = . . _ADCON1bits 1 5 -> -> 0 `i `uc ]
+[e = . . _ADCON1bits 1 4 -> -> 0 `i `uc ]
+}
+[e :U 335 ]
+"238
+[; ;mca_layerl/ADC/hal_adc.c: 238:     }
+}
+[e $U 337  ]
+"239
+[; ;mca_layerl/ADC/hal_adc.c: 239:     else{
+[e :U 333 ]
+{
+"240
+[; ;mca_layerl/ADC/hal_adc.c: 240:         do{ADCON1bits.VCFG1=0; ADCON1bits.VCFG0=0; }while(0);
+[e :U 340 ]
+{
+[e = . . _ADCON1bits 1 5 -> -> 0 `i `uc ]
+[e = . . _ADCON1bits 1 4 -> -> 0 `i `uc ]
+}
+[e :U 339 ]
+"241
+[; ;mca_layerl/ADC/hal_adc.c: 241:     }
+}
+[e :U 337 ]
+[e :U 332 ]
+"242
+[; ;mca_layerl/ADC/hal_adc.c: 242: }
+[e :UE 327 ]
+}
+"244
+[; ;mca_layerl/ADC/hal_adc.c: 244: void ADC_ISR(void){
+[v _ADC_ISR `(v ~T0 @X0 1 ef ]
+{
+[e :U _ADC_ISR ]
+[f ]
+"245
+[; ;mca_layerl/ADC/hal_adc.c: 245:     (PIR1bits.ADIF=0);
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"246
+[; ;mca_layerl/ADC/hal_adc.c: 246:     if(ADC_INTERRUPT_HANDLER){
+[e $ ! != _ADC_INTERRUPT_HANDLER -> -> 0 `i `*F2983 342  ]
+{
+"247
+[; ;mca_layerl/ADC/hal_adc.c: 247:         ADC_INTERRUPT_HANDLER();
+[e ( *U _ADC_INTERRUPT_HANDLER ..  ]
+"248
+[; ;mca_layerl/ADC/hal_adc.c: 248:     }
+}
+[e :U 342 ]
+"250
+[; ;mca_layerl/ADC/hal_adc.c: 250: }
+[e :UE 341 ]
+}

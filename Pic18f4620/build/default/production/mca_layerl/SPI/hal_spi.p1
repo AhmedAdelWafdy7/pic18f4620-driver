@@ -1,0 +1,865 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"57 mca_layerl/SPI/hal_spi.h
+[; ;mca_layerl/SPI/hal_spi.h: 57: typedef struct{
+[s S273 :2 `uc 1 :2 `uc 1 :2 `uc 1 :2 `uc 1 ]
+[n S273 . ClockPolarity SampleSelect ClockSelect Reserved ]
+"64
+[; ;mca_layerl/SPI/hal_spi.h: 64: typedef struct{
+[s S274 `uc 1 `S273 1 ]
+[n S274 . spi_mode spi_config ]
+"4738 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[s S185 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S185 . SSPM CKP SSPEN SSPOV WCOL ]
+"4745
+[s S186 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S186 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"4737
+[u S184 `S185 1 `S186 1 ]
+[n S184 . . . ]
+"4752
+[v _SSPCON1bits `VS184 ~T0 @X0 0 e@4038 ]
+"15 mca_layerl/SPI/hal_spi.c
+[; ;mca_layerl/SPI/hal_spi.c: 15: static void MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations(const SPI_Config *Config);
+[v _MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations `(v ~T0 @X0 0 sf1`*CS274 ]
+"16
+[; ;mca_layerl/SPI/hal_spi.c: 16: static void MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations(const SPI_Config *Config);
+[v _MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations `(v ~T0 @X0 0 sf1`*CS274 ]
+"4808 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[s S188 :2 `uc 1 :1 `uc 1 ]
+[n S188 . . R_NOT_W ]
+"4812
+[s S189 :5 `uc 1 :1 `uc 1 ]
+[n S189 . . D_NOT_A ]
+"4816
+[s S190 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S190 . BF UA R_nW S P D_nA CKE SMP ]
+"4826
+[s S191 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S191 . . R . D ]
+"4832
+[s S192 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S192 . . W . A ]
+"4838
+[s S193 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S193 . . nW . nA ]
+"4844
+[s S194 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S194 . . R_W . D_A ]
+"4850
+[s S195 :2 `uc 1 :1 `uc 1 ]
+[n S195 . . NOT_WRITE ]
+"4854
+[s S196 :5 `uc 1 :1 `uc 1 ]
+[n S196 . . NOT_ADDRESS ]
+"4858
+[s S197 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S197 . . nWRITE . nADDRESS ]
+"4864
+[s S198 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S198 . . RW START STOP DA ]
+"4871
+[s S199 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S199 . . NOT_W . NOT_A ]
+"4807
+[u S187 `S188 1 `S189 1 `S190 1 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 `S197 1 `S198 1 `S199 1 ]
+[n S187 . . . . . . . . . . . . . ]
+"4878
+[v _SSPSTATbits `VS187 ~T0 @X0 0 e@4039 ]
+"14 mca_layerl/SPI/hal_spi.c
+[; ;mca_layerl/SPI/hal_spi.c: 14: static void MSSP_SPI_Interrupt_Init(const SPI_Config *Config);
+[v _MSSP_SPI_Interrupt_Init `(v ~T0 @X0 0 sf1`*CS274 ]
+"5030 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
+"2581
+[s S89 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S89 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF PSPIF ]
+"2591
+[s S90 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S90 . . TX1IF RC1IF ]
+"2580
+[u S88 `S89 1 `S90 1 ]
+[n S88 . . . ]
+"2597
+[v _PIR1bits `VS88 ~T0 @X0 0 e@3998 ]
+"60 mca_layerl/SPI/../interrupt/../GPIO/hal_gpio.h
+[s S272 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S272 . port pin direction logic ]
+"145 mca_layerl/SPI/hal_spi.c
+[; ;mca_layerl/SPI/hal_spi.c: 145:     pin_config_t SPI_SDO = {.port = PORTC_INDEX, .pin = pin5, .direction = output};
+[c E2813 0 1 2 3 4 .. ]
+[n E2813 . PORTA_INDEX PORTB_INDEX PORTC_INDEX PORTD_INDEX PORTE_INDEX  ]
+[c E2803 0 1 2 3 4 5 6 7 .. ]
+[n E2803 . pin0 pin1 pin2 pin3 pin4 pin5 pin6 pin7  ]
+[c E2799 0 1 .. ]
+[n E2799 . output input  ]
+"68 mca_layerl/SPI/../interrupt/../GPIO/hal_gpio.h
+[v _gpio_pin_direction_intialize `(uc ~T0 @X0 0 ef1`*CS272 ]
+"55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\../proc/pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"192
+[; <" PORTB equ 0F81h ;# ">
+"363
+[; <" PORTC equ 0F82h ;# ">
+"538
+[; <" PORTD equ 0F83h ;# ">
+"680
+[; <" PORTE equ 0F84h ;# ">
+"883
+[; <" LATA equ 0F89h ;# ">
+"995
+[; <" LATB equ 0F8Ah ;# ">
+"1107
+[; <" LATC equ 0F8Bh ;# ">
+"1219
+[; <" LATD equ 0F8Ch ;# ">
+"1331
+[; <" LATE equ 0F8Dh ;# ">
+"1383
+[; <" TRISA equ 0F92h ;# ">
+"1388
+[; <" DDRA equ 0F92h ;# ">
+"1605
+[; <" TRISB equ 0F93h ;# ">
+"1610
+[; <" DDRB equ 0F93h ;# ">
+"1827
+[; <" TRISC equ 0F94h ;# ">
+"1832
+[; <" DDRC equ 0F94h ;# ">
+"2049
+[; <" TRISD equ 0F95h ;# ">
+"2054
+[; <" DDRD equ 0F95h ;# ">
+"2271
+[; <" TRISE equ 0F96h ;# ">
+"2276
+[; <" DDRE equ 0F96h ;# ">
+"2435
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2500
+[; <" PIE1 equ 0F9Dh ;# ">
+"2577
+[; <" PIR1 equ 0F9Eh ;# ">
+"2654
+[; <" IPR1 equ 0F9Fh ;# ">
+"2731
+[; <" PIE2 equ 0FA0h ;# ">
+"2797
+[; <" PIR2 equ 0FA1h ;# ">
+"2863
+[; <" IPR2 equ 0FA2h ;# ">
+"2929
+[; <" EECON1 equ 0FA6h ;# ">
+"2995
+[; <" EECON2 equ 0FA7h ;# ">
+"3002
+[; <" EEDATA equ 0FA8h ;# ">
+"3009
+[; <" EEADR equ 0FA9h ;# ">
+"3016
+[; <" EEADRH equ 0FAAh ;# ">
+"3023
+[; <" RCSTA equ 0FABh ;# ">
+"3028
+[; <" RCSTA1 equ 0FABh ;# ">
+"3233
+[; <" TXSTA equ 0FACh ;# ">
+"3238
+[; <" TXSTA1 equ 0FACh ;# ">
+"3489
+[; <" TXREG equ 0FADh ;# ">
+"3494
+[; <" TXREG1 equ 0FADh ;# ">
+"3501
+[; <" RCREG equ 0FAEh ;# ">
+"3506
+[; <" RCREG1 equ 0FAEh ;# ">
+"3513
+[; <" SPBRG equ 0FAFh ;# ">
+"3518
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3525
+[; <" SPBRGH equ 0FB0h ;# ">
+"3532
+[; <" T3CON equ 0FB1h ;# ">
+"3644
+[; <" TMR3 equ 0FB2h ;# ">
+"3651
+[; <" TMR3L equ 0FB2h ;# ">
+"3658
+[; <" TMR3H equ 0FB3h ;# ">
+"3665
+[; <" CMCON equ 0FB4h ;# ">
+"3755
+[; <" CVRCON equ 0FB5h ;# ">
+"3834
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3916
+[; <" PWM1CON equ 0FB7h ;# ">
+"3986
+[; <" BAUDCON equ 0FB8h ;# ">
+"3991
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4158
+[; <" CCP2CON equ 0FBAh ;# ">
+"4237
+[; <" CCPR2 equ 0FBBh ;# ">
+"4244
+[; <" CCPR2L equ 0FBBh ;# ">
+"4251
+[; <" CCPR2H equ 0FBCh ;# ">
+"4258
+[; <" CCP1CON equ 0FBDh ;# ">
+"4355
+[; <" CCPR1 equ 0FBEh ;# ">
+"4362
+[; <" CCPR1L equ 0FBEh ;# ">
+"4369
+[; <" CCPR1H equ 0FBFh ;# ">
+"4376
+[; <" ADCON2 equ 0FC0h ;# ">
+"4447
+[; <" ADCON1 equ 0FC1h ;# ">
+"4532
+[; <" ADCON0 equ 0FC2h ;# ">
+"4651
+[; <" ADRES equ 0FC3h ;# ">
+"4658
+[; <" ADRESL equ 0FC3h ;# ">
+"4665
+[; <" ADRESH equ 0FC4h ;# ">
+"4672
+[; <" SSPCON2 equ 0FC5h ;# ">
+"4734
+[; <" SSPCON1 equ 0FC6h ;# ">
+"4804
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5025
+[; <" SSPADD equ 0FC8h ;# ">
+"5032
+[; <" SSPBUF equ 0FC9h ;# ">
+"5039
+[; <" T2CON equ 0FCAh ;# ">
+"5110
+[; <" PR2 equ 0FCBh ;# ">
+"5115
+[; <" MEMCON equ 0FCBh ;# ">
+"5220
+[; <" TMR2 equ 0FCCh ;# ">
+"5227
+[; <" T1CON equ 0FCDh ;# ">
+"5330
+[; <" TMR1 equ 0FCEh ;# ">
+"5337
+[; <" TMR1L equ 0FCEh ;# ">
+"5344
+[; <" TMR1H equ 0FCFh ;# ">
+"5351
+[; <" RCON equ 0FD0h ;# ">
+"5484
+[; <" WDTCON equ 0FD1h ;# ">
+"5512
+[; <" HLVDCON equ 0FD2h ;# ">
+"5517
+[; <" LVDCON equ 0FD2h ;# ">
+"5782
+[; <" OSCCON equ 0FD3h ;# ">
+"5859
+[; <" T0CON equ 0FD5h ;# ">
+"5936
+[; <" TMR0 equ 0FD6h ;# ">
+"5943
+[; <" TMR0L equ 0FD6h ;# ">
+"5950
+[; <" TMR0H equ 0FD7h ;# ">
+"5957
+[; <" STATUS equ 0FD8h ;# ">
+"6028
+[; <" FSR2 equ 0FD9h ;# ">
+"6035
+[; <" FSR2L equ 0FD9h ;# ">
+"6042
+[; <" FSR2H equ 0FDAh ;# ">
+"6049
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6056
+[; <" PREINC2 equ 0FDCh ;# ">
+"6063
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6070
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6077
+[; <" INDF2 equ 0FDFh ;# ">
+"6084
+[; <" BSR equ 0FE0h ;# ">
+"6091
+[; <" FSR1 equ 0FE1h ;# ">
+"6098
+[; <" FSR1L equ 0FE1h ;# ">
+"6105
+[; <" FSR1H equ 0FE2h ;# ">
+"6112
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6119
+[; <" PREINC1 equ 0FE4h ;# ">
+"6126
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6133
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6140
+[; <" INDF1 equ 0FE7h ;# ">
+"6147
+[; <" WREG equ 0FE8h ;# ">
+"6159
+[; <" FSR0 equ 0FE9h ;# ">
+"6166
+[; <" FSR0L equ 0FE9h ;# ">
+"6173
+[; <" FSR0H equ 0FEAh ;# ">
+"6180
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6187
+[; <" PREINC0 equ 0FECh ;# ">
+"6194
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6201
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6208
+[; <" INDF0 equ 0FEFh ;# ">
+"6215
+[; <" INTCON3 equ 0FF0h ;# ">
+"6307
+[; <" INTCON2 equ 0FF1h ;# ">
+"6377
+[; <" INTCON equ 0FF2h ;# ">
+"6494
+[; <" PROD equ 0FF3h ;# ">
+"6501
+[; <" PRODL equ 0FF3h ;# ">
+"6508
+[; <" PRODH equ 0FF4h ;# ">
+"6515
+[; <" TABLAT equ 0FF5h ;# ">
+"6524
+[; <" TBLPTR equ 0FF6h ;# ">
+"6531
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6538
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6545
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6554
+[; <" PCLAT equ 0FF9h ;# ">
+"6561
+[; <" PC equ 0FF9h ;# ">
+"6568
+[; <" PCL equ 0FF9h ;# ">
+"6575
+[; <" PCLATH equ 0FFAh ;# ">
+"6582
+[; <" PCLATU equ 0FFBh ;# ">
+"6589
+[; <" STKPTR equ 0FFCh ;# ">
+"6695
+[; <" TOS equ 0FFDh ;# ">
+"6702
+[; <" TOSL equ 0FFDh ;# ">
+"6709
+[; <" TOSH equ 0FFEh ;# ">
+"6716
+[; <" TOSU equ 0FFFh ;# ">
+"26 mca_layerl/SPI/../GPIO/../device_config.h
+[p x OSC  =  HS          ]
+"27
+[p x FCMEN  =  OFF       ]
+"28
+[p x IESO  =  OFF        ]
+"31
+[p x PWRT  =  OFF        ]
+"32
+[p x BOREN  =  OFF       ]
+"33
+[p x BORV  =  1          ]
+"36
+[p x WDT  =  OFF         ]
+"37
+[p x WDTPS  =  32768     ]
+"40
+[p x CCP2MX  =  PORTC    ]
+"41
+[p x PBADEN  =  OFF      ]
+"42
+[p x LPT1OSC  =  OFF     ]
+"43
+[p x MCLRE  =  ON        ]
+"46
+[p x STVREN  =  ON       ]
+"47
+[p x LVP  =  OFF         ]
+"48
+[p x XINST  =  OFF       ]
+"51
+[p x CP0  =  OFF         ]
+"52
+[p x CP1  =  OFF         ]
+"53
+[p x CP2  =  OFF         ]
+"54
+[p x CP3  =  OFF         ]
+"57
+[p x CPB  =  OFF         ]
+"58
+[p x CPD  =  OFF         ]
+"61
+[p x WRT0  =  OFF        ]
+"62
+[p x WRT1  =  OFF        ]
+"63
+[p x WRT2  =  OFF        ]
+"64
+[p x WRT3  =  OFF        ]
+"67
+[p x WRTC  =  OFF        ]
+"68
+[p x WRTB  =  OFF        ]
+"69
+[p x WRTD  =  OFF        ]
+"72
+[p x EBTR0  =  OFF       ]
+"73
+[p x EBTR1  =  OFF       ]
+"74
+[p x EBTR2  =  OFF       ]
+"75
+[p x EBTR3  =  OFF       ]
+"78
+[p x EBTRB  =  OFF       ]
+"18 mca_layerl/SPI/hal_spi.c
+[; ;mca_layerl/SPI/hal_spi.c: 18: STD_ReturnType SPI_Init(const SPI_Config *Config){
+[v _SPI_Init `(uc ~T0 @X0 1 ef1`*CS274 ]
+{
+[e :U _SPI_Init ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"19
+[; ;mca_layerl/SPI/hal_spi.c: 19:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"21
+[; ;mca_layerl/SPI/hal_spi.c: 21:     if(((void*)0) == Config){
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _Config 276  ]
+{
+"22
+[; ;mca_layerl/SPI/hal_spi.c: 22:         ret = (STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"23
+[; ;mca_layerl/SPI/hal_spi.c: 23:     }
+}
+[e $U 277  ]
+"24
+[; ;mca_layerl/SPI/hal_spi.c: 24:     else{
+[e :U 276 ]
+{
+"26
+[; ;mca_layerl/SPI/hal_spi.c: 26:         (SSPCON1bits.SSPEN = 0);
+[e = . . _SSPCON1bits 0 2 -> -> 0 `i `uc ]
+"28
+[; ;mca_layerl/SPI/hal_spi.c: 28:         SSPCON1bits.SSPM = Config->spi_mode;
+[e = . . _SSPCON1bits 0 0 . *U _Config 0 ]
+"30
+[; ;mca_layerl/SPI/hal_spi.c: 30:         if((Config->spi_mode == 0) || (Config->spi_mode == 1) ||
+[e $ ! || || || == -> . *U _Config 0 `i -> 0 `i == -> . *U _Config 0 `i -> 1 `i == -> . *U _Config 0 `i -> 2 `i == -> . *U _Config 0 `i -> 3 `i 278  ]
+"31
+[; ;mca_layerl/SPI/hal_spi.c: 31:             (Config->spi_mode == 2) || (Config->spi_mode == 3)){
+{
+"32
+[; ;mca_layerl/SPI/hal_spi.c: 32:             MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations(Config);
+[e ( _MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations (1 _Config ]
+"33
+[; ;mca_layerl/SPI/hal_spi.c: 33:         }
+}
+[e $U 279  ]
+"34
+[; ;mca_layerl/SPI/hal_spi.c: 34:         else if((Config->spi_mode == 4) || (Config->spi_mode == 5)){
+[e :U 278 ]
+[e $ ! || == -> . *U _Config 0 `i -> 4 `i == -> . *U _Config 0 `i -> 5 `i 280  ]
+{
+"35
+[; ;mca_layerl/SPI/hal_spi.c: 35:             MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations(Config);
+[e ( _MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations (1 _Config ]
+"36
+[; ;mca_layerl/SPI/hal_spi.c: 36:         }
+}
+[e :U 280 ]
+[e :U 279 ]
+"38
+[; ;mca_layerl/SPI/hal_spi.c: 38:         SSPCON1bits.CKP = Config->spi_config.ClockPolarity;
+[e = . . _SSPCON1bits 0 1 . . *U _Config 1 0 ]
+"40
+[; ;mca_layerl/SPI/hal_spi.c: 40:         SSPSTATbits.SMP = Config->spi_config.SampleSelect;
+[e = . . _SSPSTATbits 2 7 . . *U _Config 1 1 ]
+"42
+[; ;mca_layerl/SPI/hal_spi.c: 42:          SSPSTATbits.CKE = Config->spi_config.ClockSelect;
+[e = . . _SSPSTATbits 2 6 . . *U _Config 1 2 ]
+"44
+[; ;mca_layerl/SPI/hal_spi.c: 44:         MSSP_SPI_Interrupt_Init(Config);
+[e ( _MSSP_SPI_Interrupt_Init (1 _Config ]
+"46
+[; ;mca_layerl/SPI/hal_spi.c: 46:         (SSPCON1bits.SSPEN = 1);
+[e = . . _SSPCON1bits 0 2 -> -> 1 `i `uc ]
+"47
+[; ;mca_layerl/SPI/hal_spi.c: 47:     }
+}
+[e :U 277 ]
+"49
+[; ;mca_layerl/SPI/hal_spi.c: 49:     return ret;
+[e ) _ret ]
+[e $UE 275  ]
+"50
+[; ;mca_layerl/SPI/hal_spi.c: 50: }
+[e :UE 275 ]
+}
+"52
+[; ;mca_layerl/SPI/hal_spi.c: 52: STD_ReturnType SPI_DeInit(const SPI_Config *Config){
+[v _SPI_DeInit `(uc ~T0 @X0 1 ef1`*CS274 ]
+{
+[e :U _SPI_DeInit ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"53
+[; ;mca_layerl/SPI/hal_spi.c: 53:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"55
+[; ;mca_layerl/SPI/hal_spi.c: 55:     if(((void*)0) == Config){
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _Config 282  ]
+{
+"56
+[; ;mca_layerl/SPI/hal_spi.c: 56:         ret = (STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"57
+[; ;mca_layerl/SPI/hal_spi.c: 57:     }
+}
+[e $U 283  ]
+"58
+[; ;mca_layerl/SPI/hal_spi.c: 58:     else{
+[e :U 282 ]
+{
+"60
+[; ;mca_layerl/SPI/hal_spi.c: 60:         (SSPCON1bits.SSPEN = 0);
+[e = . . _SSPCON1bits 0 2 -> -> 0 `i `uc ]
+"65
+[; ;mca_layerl/SPI/hal_spi.c: 65:     }
+}
+[e :U 283 ]
+"67
+[; ;mca_layerl/SPI/hal_spi.c: 67:     return ret;
+[e ) _ret ]
+[e $UE 281  ]
+"68
+[; ;mca_layerl/SPI/hal_spi.c: 68: }
+[e :UE 281 ]
+}
+"70
+[; ;mca_layerl/SPI/hal_spi.c: 70: STD_ReturnType SPI_Send_Byte(const SPI_Config *Config, const uint8 _data){
+[v _SPI_Send_Byte `(uc ~T0 @X0 1 ef2`*CS274`Cuc ]
+{
+[e :U _SPI_Send_Byte ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[v __data `Cuc ~T0 @X0 1 r2 ]
+[f ]
+"71
+[; ;mca_layerl/SPI/hal_spi.c: 71:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"73
+[; ;mca_layerl/SPI/hal_spi.c: 73:     if(((void*)0) == Config){
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _Config 285  ]
+{
+"74
+[; ;mca_layerl/SPI/hal_spi.c: 74:         ret = (STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"75
+[; ;mca_layerl/SPI/hal_spi.c: 75:     }
+}
+[e $U 286  ]
+"76
+[; ;mca_layerl/SPI/hal_spi.c: 76:     else{
+[e :U 285 ]
+{
+"77
+[; ;mca_layerl/SPI/hal_spi.c: 77:         SSPBUF = _data;
+[e = _SSPBUF __data ]
+"78
+[; ;mca_layerl/SPI/hal_spi.c: 78:         while(!(PIR1bits.SSPIF));
+[e $U 287  ]
+[e :U 288 ]
+[e :U 287 ]
+[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 288  ]
+[e :U 289 ]
+"79
+[; ;mca_layerl/SPI/hal_spi.c: 79:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"80
+[; ;mca_layerl/SPI/hal_spi.c: 80:     }
+}
+[e :U 286 ]
+"82
+[; ;mca_layerl/SPI/hal_spi.c: 82:     return ret;
+[e ) _ret ]
+[e $UE 284  ]
+"83
+[; ;mca_layerl/SPI/hal_spi.c: 83: }
+[e :UE 284 ]
+}
+"85
+[; ;mca_layerl/SPI/hal_spi.c: 85: STD_ReturnType SPI_Read_Byte(const SPI_Config *Config, uint8 *_data){
+[v _SPI_Read_Byte `(uc ~T0 @X0 1 ef2`*CS274`*uc ]
+{
+[e :U _SPI_Read_Byte ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[v __data `*uc ~T0 @X0 1 r2 ]
+[f ]
+"86
+[; ;mca_layerl/SPI/hal_spi.c: 86:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"88
+[; ;mca_layerl/SPI/hal_spi.c: 88:     if((((void*)0) == Config) || (((void*)0) == _data)){
+[e $ ! || == -> -> -> 0 `i `*v `*CS274 _Config == -> -> -> 0 `i `*v `*uc __data 291  ]
+{
+"89
+[; ;mca_layerl/SPI/hal_spi.c: 89:         ret = (STD_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"90
+[; ;mca_layerl/SPI/hal_spi.c: 90:     }
+}
+[e $U 292  ]
+"91
+[; ;mca_layerl/SPI/hal_spi.c: 91:     else{
+[e :U 291 ]
+{
+"92
+[; ;mca_layerl/SPI/hal_spi.c: 92:         while(SSPSTATbits.BF == 0);
+[e $U 293  ]
+[e :U 294 ]
+[e :U 293 ]
+[e $ == -> . . _SSPSTATbits 2 0 `i -> 0 `i 294  ]
+[e :U 295 ]
+"93
+[; ;mca_layerl/SPI/hal_spi.c: 93:         *_data = SSPBUF;
+[e = *U __data _SSPBUF ]
+"94
+[; ;mca_layerl/SPI/hal_spi.c: 94:     }
+}
+[e :U 292 ]
+"96
+[; ;mca_layerl/SPI/hal_spi.c: 96:     return ret;
+[e ) _ret ]
+[e $UE 290  ]
+"97
+[; ;mca_layerl/SPI/hal_spi.c: 97: }
+[e :UE 290 ]
+}
+"99
+[; ;mca_layerl/SPI/hal_spi.c: 99: STD_ReturnType SPI_Send_Byte_NonBlocking(const SPI_Config *Config, const uint8 _data){
+[v _SPI_Send_Byte_NonBlocking `(uc ~T0 @X0 1 ef2`*CS274`Cuc ]
+{
+[e :U _SPI_Send_Byte_NonBlocking ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[v __data `Cuc ~T0 @X0 1 r2 ]
+[f ]
+"101
+[; ;mca_layerl/SPI/hal_spi.c: 101: }
+[e :UE 296 ]
+}
+"103
+[; ;mca_layerl/SPI/hal_spi.c: 103: STD_ReturnType SPI_Read_Byte_NonBlocking(const SPI_Config *Config, uint8 *_data){
+[v _SPI_Read_Byte_NonBlocking `(uc ~T0 @X0 1 ef2`*CS274`*uc ]
+{
+[e :U _SPI_Read_Byte_NonBlocking ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[v __data `*uc ~T0 @X0 1 r2 ]
+[f ]
+"105
+[; ;mca_layerl/SPI/hal_spi.c: 105: }
+[e :UE 297 ]
+}
+"107
+[; ;mca_layerl/SPI/hal_spi.c: 107: void MSSP_SPI_ISR(void){
+[v _MSSP_SPI_ISR `(v ~T0 @X0 1 ef ]
+{
+[e :U _MSSP_SPI_ISR ]
+[f ]
+"114
+[; ;mca_layerl/SPI/hal_spi.c: 114: }
+[e :UE 298 ]
+}
+"116
+[; ;mca_layerl/SPI/hal_spi.c: 116: static void MSSP_SPI_Interrupt_Init(const SPI_Config *Config){
+[v _MSSP_SPI_Interrupt_Init `(v ~T0 @X0 1 sf1`*CS274 ]
+{
+[e :U _MSSP_SPI_Interrupt_Init ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"141
+[; ;mca_layerl/SPI/hal_spi.c: 141: }
+[e :UE 299 ]
+}
+"143
+[; ;mca_layerl/SPI/hal_spi.c: 143: static void MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations(const SPI_Config *Config){
+[v _MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations `(v ~T0 @X0 1 sf1`*CS274 ]
+{
+[e :U _MSSP_SPI_Msster_Mode_GPIO_PIN_Configurations ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"144
+[; ;mca_layerl/SPI/hal_spi.c: 144:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+[v F2917 `S272 ~T0 @X0 1 s ]
+[i F2917
+:U ..
+:U ..
+"145
+[; ;mca_layerl/SPI/hal_spi.c: 145:     pin_config_t SPI_SDO = {.port = PORTC_INDEX, .pin = pin5, .direction = output};
+-> . `E2813 2 `uc
+-> . `E2803 5 `uc
+-> . `E2799 0 `uc
+..
+..
+]
+[v _SPI_SDO `S272 ~T0 @X0 1 a ]
+[e = _SPI_SDO F2917 ]
+[v F2919 `S272 ~T0 @X0 1 s ]
+[i F2919
+:U ..
+:U ..
+"146
+[; ;mca_layerl/SPI/hal_spi.c: 146:     pin_config_t SPI_SDI = {.port = PORTC_INDEX, .pin = pin4, .direction = input};
+-> . `E2813 2 `uc
+-> . `E2803 4 `uc
+-> . `E2799 1 `uc
+..
+..
+]
+[v _SPI_SDI `S272 ~T0 @X0 1 a ]
+[e = _SPI_SDI F2919 ]
+[v F2921 `S272 ~T0 @X0 1 s ]
+[i F2921
+:U ..
+:U ..
+"147
+[; ;mca_layerl/SPI/hal_spi.c: 147:     pin_config_t SPI_CLK = {.port = PORTC_INDEX, .pin = pin3, .direction = output};
+-> . `E2813 2 `uc
+-> . `E2803 3 `uc
+-> . `E2799 0 `uc
+..
+..
+]
+[v _SPI_CLK `S272 ~T0 @X0 1 a ]
+[e = _SPI_CLK F2921 ]
+"149
+[; ;mca_layerl/SPI/hal_spi.c: 149:     ret = gpio_pin_direction_intialize(&SPI_SDO);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_SDO `*CS272 ]
+"150
+[; ;mca_layerl/SPI/hal_spi.c: 150:     ret = gpio_pin_direction_intialize(&SPI_SDI);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_SDI `*CS272 ]
+"151
+[; ;mca_layerl/SPI/hal_spi.c: 151:     ret = gpio_pin_direction_intialize(&SPI_CLK);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_CLK `*CS272 ]
+"152
+[; ;mca_layerl/SPI/hal_spi.c: 152: }
+[e :UE 300 ]
+}
+"154
+[; ;mca_layerl/SPI/hal_spi.c: 154: static void MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations(const SPI_Config *Config){
+[v _MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations `(v ~T0 @X0 1 sf1`*CS274 ]
+{
+[e :U _MSSP_SPI_Slave_Mode_GPIO_PIN_Configurations ]
+[v _Config `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"155
+[; ;mca_layerl/SPI/hal_spi.c: 155:     STD_ReturnType ret = (STD_ReturnType)0x00;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+[v F2926 `S272 ~T0 @X0 1 s ]
+[i F2926
+:U ..
+:U ..
+"156
+[; ;mca_layerl/SPI/hal_spi.c: 156:     pin_config_t SPI_SDO = {.port = PORTC_INDEX, .pin = pin5, .direction = output};
+-> . `E2813 2 `uc
+-> . `E2803 5 `uc
+-> . `E2799 0 `uc
+..
+..
+]
+[v _SPI_SDO `S272 ~T0 @X0 1 a ]
+[e = _SPI_SDO F2926 ]
+[v F2928 `S272 ~T0 @X0 1 s ]
+[i F2928
+:U ..
+:U ..
+"157
+[; ;mca_layerl/SPI/hal_spi.c: 157:     pin_config_t SPI_SDI = {.port = PORTC_INDEX, .pin = pin4, .direction = input};
+-> . `E2813 2 `uc
+-> . `E2803 4 `uc
+-> . `E2799 1 `uc
+..
+..
+]
+[v _SPI_SDI `S272 ~T0 @X0 1 a ]
+[e = _SPI_SDI F2928 ]
+[v F2930 `S272 ~T0 @X0 1 s ]
+[i F2930
+:U ..
+:U ..
+"158
+[; ;mca_layerl/SPI/hal_spi.c: 158:     pin_config_t SPI_CLK = {.port = PORTC_INDEX, .pin = pin3, .direction = input};
+-> . `E2813 2 `uc
+-> . `E2803 3 `uc
+-> . `E2799 1 `uc
+..
+..
+]
+[v _SPI_CLK `S272 ~T0 @X0 1 a ]
+[e = _SPI_CLK F2930 ]
+[v F2932 `S272 ~T0 @X0 1 s ]
+[i F2932
+:U ..
+:U ..
+"159
+[; ;mca_layerl/SPI/hal_spi.c: 159:     pin_config_t SPI_SS = {.port = PORTA_INDEX, .pin = pin5, .direction = input};
+-> . `E2813 0 `uc
+-> . `E2803 5 `uc
+-> . `E2799 1 `uc
+..
+..
+]
+[v _SPI_SS `S272 ~T0 @X0 1 a ]
+[e = _SPI_SS F2932 ]
+"161
+[; ;mca_layerl/SPI/hal_spi.c: 161:     ret = gpio_pin_direction_intialize(&SPI_SDO);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_SDO `*CS272 ]
+"162
+[; ;mca_layerl/SPI/hal_spi.c: 162:     ret = gpio_pin_direction_intialize(&SPI_SDI);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_SDI `*CS272 ]
+"163
+[; ;mca_layerl/SPI/hal_spi.c: 163:     ret = gpio_pin_direction_intialize(&SPI_CLK);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_CLK `*CS272 ]
+"165
+[; ;mca_layerl/SPI/hal_spi.c: 165:     if(4 == Config->spi_mode){
+[e $ ! == -> 4 `i -> . *U _Config 0 `i 302  ]
+{
+"166
+[; ;mca_layerl/SPI/hal_spi.c: 166:         ret = gpio_pin_direction_intialize(&SPI_SS);
+[e = _ret ( _gpio_pin_direction_intialize (1 -> &U _SPI_SS `*CS272 ]
+"167
+[; ;mca_layerl/SPI/hal_spi.c: 167:     }
+}
+[e :U 302 ]
+"168
+[; ;mca_layerl/SPI/hal_spi.c: 168: }
+[e :UE 301 ]
+}
